@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EvalucionProgreso1.Models
 {
@@ -20,7 +21,10 @@ namespace EvalucionProgreso1.Models
         public decimal Precio { get; set; }
         
         public Diaz Diaz {  get; set; }
-        
+
+        [ForeignKey("Diaz")]
+
+        public int Id { get; set; }
 
 
     }
