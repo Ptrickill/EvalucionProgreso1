@@ -1,14 +1,15 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EvalucionProgreso1.Models
 {
     public class Diaz
     {
-        public int Id { get; set; }
-
+        [Key]
+       
         [Required]
         [Range(1, int.MaxValue)]
-        public int AtributoInt { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [Range(0.01, int.MaxValue)]
@@ -16,12 +17,17 @@ namespace EvalucionProgreso1.Models
 
         [Required]
         [StringLength(100)]
-        public string AtributoString { get; set; }
+        public string NombreCompleto { get; set; }
 
         [DataType(DataType.Date)]
         [Required]
-        public DateTime AtributoFecha { get; set; }
+        public DateTime Fecha { get; set; }
 
-        public bool AtributoBool { get; set; }
+        public bool TieneBeca { get; set; }
+
+        [ForeignKey("Celular")]
+
+        public int Celular { get; set; }
+
     }
 }
