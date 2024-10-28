@@ -18,6 +18,7 @@ namespace EvalucionProgreso1.Models
         [StringLength(100)]
         public string AtributoString { get; set; }
 
+        [DataType(DataType.Date)]
         [Required]
         public DateTime AtributoFecha { get; set; }
 
