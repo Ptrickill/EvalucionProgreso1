@@ -12,7 +12,7 @@ namespace EvalucionProgreso1.Models
         public string AtrbutoInt { get; set; }
 
         [Required]
-        [Range()]
+        [Range(0.01, double.MaxValue, ErrorMessage =)]
         // GET: Diaz
         public ActionResult Index()
         {
