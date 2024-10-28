@@ -18,6 +18,8 @@ namespace EvalucionProgreso1.Models
         [Range(0.01, double.MaxValue)]
         public decimal Precio { get; set; }
 
+        [Required]
+        [Key]
         public int Id {  get; set; }
         
 

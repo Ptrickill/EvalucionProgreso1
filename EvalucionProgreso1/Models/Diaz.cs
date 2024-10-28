@@ -6,7 +6,7 @@ namespace EvalucionProgreso1.Models
     public class Diaz
     {
         [Key]
-       
+        
         [Required]
         [Range(1, int.MaxValue)]
         public int Id { get; set; }
