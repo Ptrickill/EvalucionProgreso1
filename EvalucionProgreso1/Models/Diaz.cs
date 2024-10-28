@@ -25,9 +25,11 @@ namespace EvalucionProgreso1.Models
 
         public bool TieneBeca { get; set; }
 
-        [ForeignKey("Celular")]
+       
+        public Celular Celular { get; set; }
 
-        public int Celular { get; set; }
+        [ForeignKey("Celular")]
+        public int IdCelular { get; set; }
 
     }
 }

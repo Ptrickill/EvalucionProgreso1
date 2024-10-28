@@ -4,7 +4,8 @@ namespace EvalucionProgreso1.Models
 {
     public class Celular
     {
-        public int Celular { get; set; }
+        [Key]
+        public int IdCelular { get; set; }
 
         [Required]
         [StringLength(100)]
@@ -17,10 +18,8 @@ namespace EvalucionProgreso1.Models
         [Required]
         [Range(0.01, double.MaxValue)]
         public decimal Precio { get; set; }
-
-        [Required]
-        [Key]
-        public int Id {  get; set; }
+        
+        public Diaz Diaz {  get; set; }
         
 
 
